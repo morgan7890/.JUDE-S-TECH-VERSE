@@ -44,6 +44,37 @@
         .footer-links a:hover { color:var(--neon-pink); }
         .tagline { font-size:1.1rem; color:var(--neon-pink); font-weight:500; }
         .video-thumbnail { max-width:100%; border-radius:10px; margin-bottom:1rem; }
+
+        /* Floating WhatsApp Icon */
+        #whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            box-shadow: 0 0 15px #00ffcc, 0 0 30px #25D366;
+            z-index: 999;
+            transition: transform 0.3s ease;
+            animation: pulseW 2s infinite;
+        }
+        #whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+        @keyframes pulseW {
+            0%, 100% {
+                box-shadow: 0 0 10px #00ffcc, 0 0 20px #25D366;
+            }
+            50% {
+                box-shadow: 0 0 20px #00ffcc, 0 0 40px #25D366;
+            }
+        }
     </style>
 </head>
 <body>
@@ -62,6 +93,21 @@
     <div class="tagline text-center p-2">
         <p>Download any kind of music here free from ads</p>
     </div>
+
+    <!-- WhatsApp Channel Promo Section -->
+    <section style="background: #1a1a1a; padding: 40px 20px; text-align: center; border-top: 2px solid var(--neon-blue); margin-bottom: 2rem;">
+        <h2 style="color: var(--neon-blue); font-size: 2rem; font-family: 'Orbitron'; margin-bottom: 10px;">
+            🔔 Follow JUDE 👾TECH VERSE on WhatsApp!
+        </h2>
+        <p style="color: #ccc; font-size: 1.1em; max-width: 700px; margin: 0 auto 20px;">
+            Get instant updates on music tools, download tips, and MP3/MP4 features—straight to your WhatsApp.
+        </p>
+        <a href="https://whatsapp.com/channel/0029VbASlwuDDmFZhzmvum1h" target="_blank" style="text-decoration: none;">
+            <button style="background: linear-gradient(90deg, #00ffcc, #0066ff); color: #fff; font-size: 1.1em; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 0 15px #00ffcc, 0 0 20px #0066ff;">
+                🚀 Follow Now
+            </button>
+        </a>
+    </section>
 
     <div class="container">
         <div class="card">
@@ -83,6 +129,14 @@
         </div>
         <p>© 2025 JUDE'S TECH VERSE from Meta</p>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbASlwuDDmFZhzmvum1h" 
+       target="_blank" 
+       id="whatsapp-float" 
+       title="Follow JUDE 👾TECH VERSE">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         async function searchVideo() {
@@ -112,3 +166,4 @@
     </script>
 </body>
 </html>
+
